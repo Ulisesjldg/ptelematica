@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="main.css">
+    <script type="text/javascript">
+ 
+        incrementoJ =0;
+        function crearJugador(obj) {
+          incrementoJ++;
+         
+          field = document.getElementById('Players');
+         contenedor = document.createElement('div');
+          contenedor.id = 'div'+incrementoJ;
+          field.appendChild(contenedor);
+         
+          boton = document.createElement('input');
+          boton.type = 'text';
+          boton.name = 'text'+'[ ]';
+          boton.placeholder='Nombre del jugador';
+          contenedor.appendChild(boton);
+
+          boton = document.createElement('input');
+          boton.type = 'text';
+          boton.name = 'text'+'[ ]';
+          boton.placeholder='Apellido del juagdor';
+          contenedor.appendChild(boton);
+
+          boton = document.createElement('input');
+          boton.type = 'text';
+          boton.name = 'text'+'[ ]';
+          boton.placeholder='Numero del jugador';
+          contenedor.appendChild(boton);
+         
+         
+        }
+        
+        incrementoA =0;
+        function crearArbitro(obj) {
+          incrementoA ++;
+         
+          field = document.getElementById('Arbitro');
+         contenedor = document.createElement('div');
+          contenedor.id = 'div'+incrementoA;
+          field.appendChild(contenedor);
+         
+          boton = document.createElement('input');
+          boton.type = 'text';
+          boton.name = 'text'+'[ ]';
+          boton.placeholder='Nombre del Arbitro';
+          contenedor.appendChild(boton);
+
+          boton = document.createElement('input');
+          boton.type = 'text';
+          boton.name = 'text'+'[ ]';
+          boton.placeholder='Procedencia';
+          contenedor.appendChild(boton);
+         
+         
+        }
+        incrementoE =0;
+        function crearEstadio(obj) {
+          incrementoE++;
+         
+          field = document.getElementById('Estadio');
+         contenedor = document.createElement('div');
+          contenedor.id = 'div'+incrementoE;
+          field.appendChild(contenedor);
+         
+          boton = document.createElement('input');
+          boton.type = 'text';
+          boton.name = 'text'+'[ ]';
+          boton.placeholder='Nombre del Estadio';
+          contenedor.appendChild(boton);
+
+          boton = document.createElement('input');
+          boton.type = 'text';
+          boton.name = 'text'+'[ ]';
+          boton.placeholder='Capacidad';
+          contenedor.appendChild(boton);
+
+          boton = document.createElement('input');
+          boton.type = 'text';
+          boton.name = 'text'+'[ ]';
+          boton.placeholder='Ubicación';
+          contenedor.appendChild(boton);
+        }
+        function borrar(obj) {
+          field = document.getElementById('field');
+          field.removeChild(document.getElementById(obj));
+        }
+     </script>
+</head>
+<body>
+    
+    
+    <fieldset id="Players">    
+        <form>
+            
+        <p style="color:#FFFFFF";>
+            <select name="equipo1" id="equipo1">
+                <optgroup label="Grupo 1">
+                   <option value="equipoA">equipoA</option>
+                   <option value="equipoB">equipoB</option>
+                   <option value="equipoC">equipoC</option>
+                   <option value="equipoD">equipoA</option>
+                </optgroup>
+                <optgroup label="Grupo2">
+                    <option value="equipoE">equipoE</option>
+                    <option value="equipoF">equipoF</option>
+                    <option value="equipoG">equipoD</option>
+                    <option value="equipoH">equipoH</option>
+                </optgroup>
+              </select>
+               VS. 
+               <select name="equipo1" id="equipo1">
+                <optgroup label="Grupo 1">
+                   <option value="equipoA">equipoA</option>
+                   <option value="equipoB">equipoB</option>
+                   <option value="equipoC">equipoC</option>
+                   <option value="equipoD">equipoA</option>
+                </optgroup>
+                <optgroup label="Grupo2">
+                    <option value="equipoE">equipoE</option>
+                    <option value="equipoF">equipoF</option>
+                    <option value="equipoG">equipoD</option>
+                    <option value="equipoH">equipoH</option>
+                </optgroup>
+              </select>
+              <br>
+              <br>
+              Estadio: <select name="estadio" id="estadio">
+                   <option value="estadioA">estadioA</option>
+                   <option value="estadioB">estadioB</option>
+                   <option value="estadioC">estadioC</option>
+                   <option value="estadioD">estadioA</option>
+                </optgroup>
+              </select>
+              &nbsp;
+              Fecha: <input type="date" name="Fechapartido" >
+              &nbsp;
+              Hora: <input type="time" name="Horapartido" >
+              <br>
+              <br>
+              Arbitro 1: 
+              <select name="estadio" id="estadio">
+                <option value="estadioA">estadioA</option>
+                <option value="estadioB">estadioB</option>
+                <option value="estadioC">estadioC</option>
+                <option value="estadioD">estadioA</option>
+                </optgroup>
+              </select>
+            Arbitro 2: 
+            <select name="estadio" id="estadio">
+                <option value="estadioA">estadioA</option>
+                <option value="estadioB">estadioB</option>
+                <option value="estadioC">estadioC</option>
+                <option value="estadioD">estadioA</option>
+                </optgroup>
+            </select>
+            Arbitro 3: 
+            <select name="estadio" id="estadio">
+                <option value="estadioA">estadioA</option>
+                <option value="estadioB">estadioB</option>
+                <option value="estadioC">estadioC</option>
+                <option value="estadioD">estadioA</option>
+                </optgroup>
+            </select>
+            arbitro 4: 
+            <select name="estadio" id="estadio">
+                <option value="estadioA">estadioA</option>
+                <option value="estadioB">estadioB</option>
+                <option value="estadioC">estadioC</option>
+                <option value="estadioD">estadioA</option>
+                </optgroup>
+            </select>
+              <br>
+              <br>
+            <button type="submit">
+                GUARDAR
+            </button>
+        </p>
+
+        </form>
+    </fieldset>  
+   
+ 
+
+
+</body>
+</html>

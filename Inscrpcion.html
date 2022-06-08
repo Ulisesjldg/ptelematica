@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="main.css">
+    <script type="text/javascript">
+ 
+        incrementoJ =0;
+        function crearJugador(obj) {
+          incrementoJ++;
+         
+          field = document.getElementById('Players');
+         contenedor = document.createElement('div');
+          contenedor.id = 'div'+incrementoJ;
+          field.appendChild(contenedor);
+         
+          boton = document.createElement('input');
+          boton.type = 'text';
+          boton.name = 'text'+'[ ]';
+          boton.placeholder='Nombre del jugador';
+          contenedor.appendChild(boton);
+
+          boton = document.createElement('input');
+          boton.type = 'text';
+          boton.name = 'text'+'[ ]';
+          boton.placeholder='Apellido del juagdor';
+          contenedor.appendChild(boton);
+
+          boton = document.createElement('input');
+          boton.type = 'text';
+          boton.name = 'text'+'[ ]';
+          boton.placeholder='Numero del jugador';
+          contenedor.appendChild(boton);
+         
+         
+        }
+        
+        incrementoA =0;
+        function crearArbitro(obj) {
+          incrementoA ++;
+         
+          field = document.getElementById('Arbitro');
+         contenedor = document.createElement('div');
+          contenedor.id = 'div'+incrementoA;
+          field.appendChild(contenedor);
+         
+          boton = document.createElement('input');
+          boton.type = 'text';
+          boton.name = 'text'+'[ ]';
+          boton.placeholder='Nombre del Arbitro';
+          contenedor.appendChild(boton);
+
+          boton = document.createElement('input');
+          boton.type = 'text';
+          boton.name = 'text'+'[ ]';
+          boton.placeholder='Procedencia';
+          contenedor.appendChild(boton);
+         
+         
+        }
+        incrementoE =0;
+        function crearEstadio(obj) {
+          incrementoE++;
+         
+          field = document.getElementById('Estadio');
+         contenedor = document.createElement('div');
+          contenedor.id = 'div'+incrementoE;
+          field.appendChild(contenedor);
+         
+          boton = document.createElement('input');
+          boton.type = 'text';
+          boton.name = 'text'+'[ ]';
+          boton.placeholder='Nombre del Estadio';
+          contenedor.appendChild(boton);
+
+          boton = document.createElement('input');
+          boton.type = 'text';
+          boton.name = 'text'+'[ ]';
+          boton.placeholder='Capacidad';
+          contenedor.appendChild(boton);
+
+          boton = document.createElement('input');
+          boton.type = 'text';
+          boton.name = 'text'+'[ ]';
+          boton.placeholder='Ubicación';
+          contenedor.appendChild(boton);
+        }
+        function borrar(obj) {
+          field = document.getElementById('field');
+          field.removeChild(document.getElementById(obj));
+        }
+     </script>
+</head>
+<body>
+    
+    
+    <fieldset id="Players">    
+        <form>
+            
+            <p style="color:#FFFFFF";>
+            Inscripcion de equipos:<br>
+        Nombre del equipo: <input type="text" name="team" placeholder="Nombre del equipo">
+        Nombre del entrenador: <input type="text" name="manager" placeholder="Entrenador"><br>
+        Nombre del jugador: <input type="text" name="nplayer" placeholder="Nombre del jugador">
+        Apellido del jugador: <input type="text" name="lplayer" placeholder="Apellido del jugador">
+        Numero del jugador: <input type="number" name="dorsal" placeholder="Numero del jugador">
+        <button type="button" onclick="crearJugador(this)">
+            Agregar jugador
+        </button><br>
+        Logo del equipo: <input type="file" name="archivosubido"><br>
+        <button type="submit">
+            GUARDAR
+        </button>
+          </p>
+
+        </form>
+    </fieldset>  
+    <fieldset id="Arbitro">
+        <button type="button" onclick="crearArbitro(this)">
+            Agregar arbitro
+        </button><br>
+        <input type="text" name="arbitro1" placeholder="arbitro 1">
+        <input type="text" name="pa1" placeholder="Procedencia"><br>
+        <input type="text" name="arbitro2" placeholder="arbitro 2">
+        <input type="text" name="pa2" placeholder="Procedencia"><br>
+        <input type="text" name="arbitro3" placeholder="arbitro 3">
+        <input type="text" name="pa3" placeholder="Procedencia"><br>
+        <input type="text" name="arbitro4" placeholder="arbitro 4">
+        <input type="text" name="pa4" placeholder="Procedencia"><br>
+        
+    </fieldset>
+    <fieldset id="Estadio">
+        <button type="button" onclick="crearEstadio(this)">
+            Agregar estadio
+        </button><br>
+        <input type="text" name="estadio1" placeholder="Estadio">
+        <input type="text" name="cap1" placeholder="Capacidad">
+       <input type="text" name="ubi1" placeholder="Ubicacion"><br>
+       <input type="text" name="estadio2" placeholder="Estadio">
+       <input type="text" name="cap2" placeholder="Capacidad">
+      <input type="text" name="ubi2" placeholder="Ubicacion"><br>
+      <input type="text" name="estadio3" placeholder="Estadio">
+      <input type="text" name="cap3" placeholder="Capacidad">
+     <input type="text" name="ubi3" placeholder="Ubicacion"><br>
+     <input type="text" name="estadio4" placeholder="Estadio">
+        <input type="text" name="cap4" placeholder="Capacidad">
+       <input type="text" name="ubi4" placeholder="Ubicacion"><br>
+       
+    </fieldset>
+    
+ 
+
+
+</body>
+</html>
